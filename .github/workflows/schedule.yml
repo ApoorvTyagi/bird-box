@@ -2,7 +2,7 @@ name: Update gist with latest tweet
 on:
   workflow_dispatch:
   schedule:
-    - cron: '59 00 * * *'
+    - cron: '30 12 * * *'
 jobs:
   update-gist:
     runs-on: ubuntu-latest

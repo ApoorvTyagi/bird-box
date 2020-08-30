@@ -30,8 +30,7 @@ async function main() {
     screen_name: twitterHandle,
     count: 1,
     trim_user: 1,
-    exclude_replies: true,
-    tweet_mode: 'extended'
+    exclude_replies: true
   });
 
   const tweet = timeline[0];

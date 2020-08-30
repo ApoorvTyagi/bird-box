@@ -31,7 +31,7 @@ async function main() {
     count: 1,
     trim_user: 1,
     exclude_replies: true,
-    tweet_mode: extended
+    tweet_mode: 'extended'
   });
 
   const tweet = timeline[0];

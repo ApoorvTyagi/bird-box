@@ -56,7 +56,7 @@ async function updateGist(tweet) {
           filename: `@${twitterHandle} - ${timeAgo} ago | ❤ ${
             tweet.favorite_count
           } | 🔁 ${tweet.retweet_count}`,
-          content: wrapAnsi(tweet.text.slice(0, -4), 59, { hard: true })
+          content: wrapAnsi(tweet.text.slice(0, -3), 59, { hard: true })
         }
       }
     });

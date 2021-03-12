@@ -48,6 +48,7 @@ async function updateGist(tweet) {
   const filename = Object.keys(gist.data.files)[0];
   const parsedDate = new Date(tweet.created_at);
   const timeAgo = formatDistanceStrict(parsedDate, new Date());
+
   try {
     await octokit.gists.update({
       gist_id: gistId,
@@ -56,7 +57,7 @@ async function updateGist(tweet) {
           filename: `@${twitterHandle} - ${timeAgo} ago | ❤ ${
             tweet.favorite_count
           } | 🔁 ${tweet.retweet_count}`,
-          content: wrapAnsi(tweet.text.slice(0, -4), 59, { hard: true })
+          content: wrapAnsi(tweet.text, 62, { hard: true })
         }
       }
     });
